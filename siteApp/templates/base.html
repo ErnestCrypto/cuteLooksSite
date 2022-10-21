@@ -59,12 +59,12 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="{% url 'siteAppUrls:indexPage' %}" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="{% url 'siteAppUrls:aboutPage' %}" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="{% url 'siteAppUrls:servicesPage' %}" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="{% url 'siteAppUrls:workPage' %}" class="nav-link">Work</a></li>
-	          <li class="nav-item"><a href="{% url 'siteAppUrls:blogPage' %}" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="{% url 'siteAppUrls:contactPage' %}" class="nav-link">Contact</a></li>
+	          <li class="nav-item {{index}}"><a href="{% url 'siteAppUrls:indexPage' %}" class="nav-link">Home</a></li>
+	          <li class="nav-item {{about}}"><a href="{% url 'siteAppUrls:aboutPage' %}" class="nav-link">About</a></li>
+	          <li class="nav-item {{services}}"><a href="{% url 'siteAppUrls:servicesPage' %}" class="nav-link">Services</a></li>
+	          <li class="nav-item {{work}}"><a href="{% url 'siteAppUrls:workPage' %}" class="nav-link">Work</a></li>
+	          <li class="nav-item {{blog}}"><a href="{% url 'siteAppUrls:blogPage' %}" class="nav-link">Blog</a></li>
+	          <li class="nav-item {{contact}}"><a href="{% url 'siteAppUrls:contactPage' %}" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>
