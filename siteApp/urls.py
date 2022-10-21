@@ -6,5 +6,11 @@ app_name = "siteAppUrls"
 
 
 urlpatterns = [
-    path('/', views.indexPage, name="indexPage"),
+    path('', views.indexPage, name="indexPage"),
+    path('about', views.aboutPage, name="aboutPage"),
+    path('blog_single', views.blog_singlePage, name="blog_singlePage"),
+    path('blog', views.blogPage, name="blogPage"),
+    path('contact', views.contactPage, name="contactPage"),
+    path('services', views.servicesPage, name="servicesPage"),
+    path('work', views.workPage, name="workPage"),
 ]
