@@ -6,6 +6,11 @@ def loginPage(request):
     return render(request, 'login.html', context)
 
 
+def signupPage(request):
+    context = {}
+    return render(request, 'signup.html', context)
+
+
 def indexPage(request):
     context = {
         'index': 'active',

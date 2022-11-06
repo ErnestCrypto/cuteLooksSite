@@ -59,8 +59,10 @@ width:380px;
     position: relative;
     width:380px;
     height: 600px;
-    background: #1c1c1c;
+    background: white;
     border-radius:8px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
     overflow: hidden;
 }
 
