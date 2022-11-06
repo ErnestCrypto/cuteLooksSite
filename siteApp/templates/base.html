@@ -9,10 +9,10 @@
     
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700" rel="stylesheet">
 
-    <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css'%}">
+   <link rel="stylesheet" href="{% static 'css/open-iconic-bootstrap.min.css'%}"> 
     <link rel="stylesheet" href="{% static 'css/animate.css'%}">
     
-    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
+     <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/owl.theme.default.min.css'%}">
     <link rel="stylesheet" href="{% static 'css/magnific-popup.css'%}">
 
@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="{% static 'css/flaticon.css'%}">
     <link rel="stylesheet" href="{% static 'css/icomoon.css'%}">
     <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'css/myStyle.css'%}">
     <link rel="icon" href="{% static 'images/cute2.png'%}">
 
   </head>
@@ -38,7 +39,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center" data-scrollax-parent="true">
           <div class="col-md-8 ftco-animate text-center" data-scrollax=" properties: { translateY: '70%' }">
           	<div class="icon">
-          		<a href="index.html" class="logo">
+          		<a href="{% url 'siteAppUrls:indexPage' %}" class="logo">
                     <!-- <img src = "images/cute2.png" alt="logo"/> -->
           			<span class="flaticon-flower"></span> 
           			<h1>Cute Looks</h1>
@@ -52,7 +53,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html" style ="color:#FA5BDD" >Cute Looks</a>
+	      <a class="navbar-brand" href="{% url 'siteAppUrls:indexPage' %}" style ="color:#FA5BDD" >Cute Looks</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -65,7 +66,9 @@
 	          <li class="nav-item {{work}}"><a href="{% url 'siteAppUrls:workPage' %}" class="nav-link">Work</a></li>
 	          <li class="nav-item {{blog}}"><a href="{% url 'siteAppUrls:blogPage' %}" class="nav-link">Blog</a></li>
 	          <li class="nav-item {{contact}}"><a href="{% url 'siteAppUrls:contactPage' %}" class="nav-link">Contact</a></li>
-	        </ul>
+	        	<li class="nav-item {{contact}}"><a href="{% url 'siteAppUrls:loginPage' %}" class="nav-link login">Login</a></li>
+
+          </ul>
 	      </div>
 	    </div>
 	  </nav>

@@ -1,6 +1,11 @@
 from django.shortcuts import render
 
 
+def loginPage(request):
+    context = {}
+    return render(request, 'login.html', context)
+
+
 def indexPage(request):
     context = {
         'index': 'active',

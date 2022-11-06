@@ -285,10 +285,7 @@
 	$('#appointment_time').timepicker();
 
 
-$('.nav-item').click(()=>{
-	$('.nav-item').addClass('.active');
-	console.log('fired')
-})
+
 
 })(jQuery);
 
