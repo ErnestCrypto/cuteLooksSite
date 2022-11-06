@@ -15,6 +15,8 @@ urlpatterns = [
     path('work', views.workPage, name="workPage"),
     path('login', views.loginPage, name="loginPage"),
     path('signup', views.signupPage, name="signupPage"),
+    path('forget', views.forgetPage, name="forgetPage"),
+
 
 
 ]

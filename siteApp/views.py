@@ -11,6 +11,11 @@ def signupPage(request):
     return render(request, 'signup.html', context)
 
 
+def forgetPage(request):
+    context = {}
+    return render(request, 'forget.html', context)
+
+
 def indexPage(request):
     context = {
         'index': 'active',
