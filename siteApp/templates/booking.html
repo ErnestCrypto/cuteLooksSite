@@ -1,0 +1,87 @@
+ {% extends 'base.html' %} 
+{% load static %}
+ {% block content%}
+
+    <section class="ftco-section contact-section">
+        <div class="container mt-5">
+          <div class="row block-9">
+						<div class="col-md-4 contact-info ftco-animate">
+							<div class="row">
+								<div class="col-md-12 mb-4">
+		              <h2 class="h4">Book Us Now!</h2>
+		            </div>
+		            <div class="col-md-12 mb-3">
+                        <p style="margin:0 !important;color:#FA5BDD;font-weight: bold">REGULAR MAKEUP:</p>
+		              <p style="margin:0 !important"><span>Simple look without lashes: </span>Ghc 65.00</p>
+                    <p style="margin:0 !important"><span>Simple look with lashes: </span>Ghc 85.00</p>
+                    <p style="margin:0 !important"><span>Full glam: </span>Ghc 100.00</p>
+
+		            </div>
+		            <div class="col-md-12 mb-3">
+<p style="margin:0 !important;color:#FA5BDD;font-weight: bold">PHOTOSHOOT:</p>
+<p style="margin:0 !important"><span>Without lashes: </span>Ghc 85.00</p>
+<p style="margin:0 !important"><span>With lashes: </span>Ghc 100.00</p>
+		            </div>
+		            <div class="col-md-12 mb-3">
+<p style="margin:0 !important;color:#FA5BDD;font-weight: bold">EDITORIAL:</p>
+<p style="margin:0 !important"><span>Without lashes: </span>Ghc 80.00</p>
+<p style="margin:0 !important"><span>With lashes: </span>Ghc 100.00</p>
+		            </div>
+		            <div class="col-md-12 mb-3">
+<p style="margin:0 !important;color:#FA5BDD;font-weight: bold">BRIDAL:</p>
+<p style="margin:0 !important"><span>Bride only: </span>Ghc 500.00</p>
+<p style="margin:0 !important"><span>Bride and bridesmaid: </span>Ghc 600.00</p>
+		            </div>
+							</div>
+						</div>
+						<div class="col-md-1"></div>
+            <div class="col-md-6 ftco-animate">
+              <form action="" class="contact-form" method="post">
+                {% csrf_token %}
+              	<div class="row">
+              		<div class="col-md-6">
+		                <div class="form-group">
+		                  <input type="text" name="username" class="form-control" placeholder="Your Name" required>
+		                </div>
+	                </div>
+	                <div class="col-md-6">
+		                <div class="form-group">
+		                  <input type="email" class="form-control" placeholder="Your Email" name="email" required>
+		                </div>
+		                </div>
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your whatsapp number" name="phone" required>
+                            </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                <select id="booking_type" class="form-control" name="booking_type" required>
+                    <option value="" disabled selected hidden>Please select a booking type</option>
+                    <option value="Regular Makeup">REGULAR MAKEUP</option>
+                    <option value="Photoshoot">PHOTOSHOOT</option>
+                    <option value="Editorial">EDITORIAL</option>
+                    <option value="Bridal">BRIDAL</option>
+                </select>
+
+                </div>
+                <div class="form-group">
+<select id="booking_specification" class="form-control" name="booking_specification" required>
+    <option value="" disabled selected hidden>Please select a booking specification</option>
+    <option value="Without lashes">Without lashes</option>
+    <option value="With lashes">With lashes</option>
+    <option value="Full glam">Full glam</option>
+    <option value="Bride only">Bride only</option>
+    <option value="Bride and bridesmaid">Bride and bridesmaid</option>
+
+</select>                </div>
+                <div class="form-group">
+                  <input type="submit" value="Send Email" class="btn btn-primary py-3 px-5" style="width:inherit">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+{% endblock %}

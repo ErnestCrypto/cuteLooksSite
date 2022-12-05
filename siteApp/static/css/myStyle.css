@@ -276,7 +276,73 @@ opacity: 0.8;
 }
 
 
+/*  services.html */
+.myservices{
+    /* background:red; */
+    padding: 2%;
+}
+.servicehd{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding: 5%;
+}
+.servicehd h2{
+text-transform:uppercase;
+color:#FA5BDD;
+}
 
+.servicebox h4{
+text-transform:capitalize;
+color:#FA5BDD;
+}
+
+.serviceboxsubcontainer{
+    margin: 10px 0px 100px 0px;
+}
+
+.serviceboxsub{
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10%;
+    margin:12px 0px;
+
+}
+
+.serviceboxsub a{
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 10px 44px;
+    text-align: center;
+    background: #FA5BDD;
+    border:1px solid #FA5BDD;
+    color:white;
+    border-radius: 21px;
+    font-weight: 600;
+    margin: 2%;
+    width:inherit;
+    text-align: center;
+/* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+}
+.serviceboxsub i{
+/* background:red; */
+}
+.serviceboxsub a:hover{
+    color: #FA5BDD;
+    background:white;
+}
+
+
+
+
+
+
+
+
+/* services.html */
 
 
 
