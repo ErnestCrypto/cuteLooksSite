@@ -345,6 +345,16 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 /* services.html */
 
 
+@media only screen and (max-width: 600px) {
+    /* services.html */
+    
+.serviceboxsub{
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 8px;
+}
+/* services.html */
+
+}
+
 
 
 
