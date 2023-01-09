@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.core.mail import EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
-from twilio.rest import Client
+# from twilio.rest import Client
 
 def loginPage(request):
     context = {}
