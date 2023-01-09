@@ -7733,9 +7733,11 @@ h1, h2, h3, h4, h5,
     .work-entry .info > div {
       display: block;
       width: 100%;
-      text-align: center; }
+      text-align: center; 
+    }
     .work-entry .info h3 {
       color: #fff;
+      text-shadow: 2px 2px 13px #f303b7;
       margin-bottom: 0;
       font-weight: 600;
       font-size: 20px; }

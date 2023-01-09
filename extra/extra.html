@@ -344,3 +344,52 @@
       {% comment %} <div id="map"></div> {% endcomment %}
 
 	end index.html
+
+
+	start email.html
+	<body>
+
+    <div class="col-sm-12 mycontainer">
+        <div class="mycontentwrapper col-sm-8" style ="">
+            <div class="myheader col-sm-12">
+                        <div class="headimgcon">
+                                <img src="{% static 'images/cute2.png'%}" class="img-fluid" alt="pic">
+                            <h2>CuteLooks Studios</h2>
+                        </div>
+                        <img src="{% static 'images/cute2.png'%}" class="myheaderimg" alt="pic">
+            </div>
+
+
+            <div class="myhcontent col-sm-12">
+                <h3>booking confirmation from CuteLooks Studios</h3>
+                <div class="col-sm-12 confetti">
+                    <img src="{% static 'images/182-1823686_wedding-confetti-icon-stock-illustration-confetti-png-removebg-preview.png'%}"
+                        width="20%" alt="pic">
+                
+                </div>
+                <p>Dear {{username}},</p>
+                <p>Your booking for booking type: {{booking_type}} with booking specification: {{booking_specification}} has been confirmed.
+                    You will be contacted shortly. Thank you.
+                </p>
+            </div>
+            <div class="emailfooter col-sm-12">
+                <div class="footimgcon col-sm-6">
+             
+                                     <img src="{% static 'images/whatsapp_80px.png'%}" class="myheaderimg" alt="pic">
+
+                    <p>call us on : +233243971445</p>
+                </div>
+
+                <div class="footimgcon col-sm-6">
+                 <img src="{% static 'images/whatsapp_80px.png'%}" class="myheaderimg" alt="pic">
+                    <p>whataspp us on : +233243971445</p>
+                </div>
+              
+            </div>
+        </div>
+       
+    </div>
+
+</body>
+
+end email.html

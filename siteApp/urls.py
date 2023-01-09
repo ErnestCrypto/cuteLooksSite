@@ -18,6 +18,7 @@ urlpatterns = [
     path('forget', views.forgetPage, name="forgetPage"),
     path('booking', views.bookingPage, name="bookingPage"),
     path('confirm', views.confirmPage, name="confirmPage"),
+    path('email', views.emailPage, name="emailPage"),
 
 
 

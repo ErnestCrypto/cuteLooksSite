@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" defer></script>
+
+
+</head>
+<div class="mycontainer" style = "border: 1px solid rgba(0,0,0,0.1); padding:0% 0% 10% 0%;">
+<div class="myheader" style="background: #FA5BDD; padding: 2% 0% 2% 0%;text-align:center">
+<h2 style="color:white; ">
+    CuteLooks Studios 
+</h2>
+</div>
+<div style="padding:3%">
+<h4 style="text-transform:capitalize;color:#FA5BDD; font-weight: 600;font-size:21px;"> booking confirmation from CuteLooks Studios</h4>
+  <p style="text-transform:capitalize; color: rgba(0,0,0,0.5);font-size:16px">
+    Dear {{username}},
+  </p>
+<p style=" color: rgba(0,0,0,0.5);font-size:16px">
+Your booking for booking type: {{booking_type}} with booking specification: {{booking_specification}} has been
+confirmed.
+You will be contacted shortly. Thank you.
+</p>
+</div>
+
+
+
+</div>
+</html>

@@ -335,14 +335,108 @@ box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     background:white;
 }
 
-
-
-
-
-
-
-
 /* services.html */
+
+/* email.html */
+.mycontainer{
+    margin: 0 auto;
+   padding: 10%;
+   display: flex;
+   align-items:center;
+   flex-direction:column;
+   
+}
+
+.mycontentwrapper{
+margin: 0 auto;
+padding: 0% 0% 5% 0%!important;
+
+display: flex;
+flex-direction: column;
+box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; 
+}
+
+
+.myheader{
+margin: 0 auto;
+background: #191E24;
+display: flex;
+color: #fff;
+align-items: center;
+justify-content: space-between;
+position: relative;
+}
+.myheaderimg{
+margin: 0 !important;
+opacity: 0.3;
+position: absolute;
+width: 19%;
+left:0%;
+}
+
+.headimgcon{
+margin: 0 !important;
+padding: 5% 0px 3% 0px;
+display: flex;
+align-items: center;
+}
+.headimgcon h2{
+color: #fff;
+
+}
+
+.headimgcon img{
+width: 20%;
+position: relative;
+
+}
+
+.myhcontent{
+    padding: 3% 0px 0px 2%;
+}
+.myhcontent h3{
+text-transform: capitalize;
+font-weight: bold;
+color:#FA5BDD;
+text-align: center;
+}
+
+.myhcontent p{
+    font-size:15px;   
+}
+
+.emailfooter{
+    margin: 10% 0% 0% 0%;
+}
+
+.footimgcon{
+    display: flex;
+    align-items: center;
+    justify-content:start;
+
+}
+.footimgcon p{
+text-transform: capitalize;
+}
+.footimgcon img{
+position: relative;
+opacity: 1;
+width:7%;
+margin: 0 auto;
+}
+
+.confetti{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    padding: 3%;
+}
+
+/* email.html */
+
+
+
+
 
 
 @media only screen and (max-width: 600px) {

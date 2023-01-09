@@ -1,7 +1,12 @@
 from django.shortcuts import render, redirect
 from django.conf import settings
 from django.core.mail import send_mail
-
+from django.conf import settings
+from django.http import HttpResponse
+from django.core.mail import EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
+from twilio.rest import Client
 
 def loginPage(request):
     context = {}
@@ -155,19 +160,55 @@ def bookingPage(request):
         phone = request.POST.get('phone')
         booking_type = request.POST.get('booking_type')
         booking_specification = request.POST.get('booking_specification')
-        subject = 'Client Bookings'
-        cleint_subject = 'Bookings Confirmed'
-        message = f"Hello, please my name is {username} and I would like to book the {booking_type}, {booking_specification} makeup package. I can be contacted on {phone}"
-        client_message = f"Hi,{username}.Your booking has been received successfully. You will be contacted on {phone} shortly. "
-        email_from = settings.EMAIL_HOST_USER
-        recipient_list = ['cutelooksgh@gmail.com']
-        client_list = [email]
         try:
-            send_mail(subject, message, email_from, recipient_list)
-            send_mail(cleint_subject, client_message, email_from, client_list)
+            context = {
+                "username":username,
+                "email":email,
+                "phone":phone,
+                "booking_type":booking_type,
+                "booking_specification": booking_specification,
+
+            }
+            html_content = render_to_string("email.html", context)
+            text_content = strip_tags(html_content)
+            email = EmailMultiAlternatives(
+                "Booking Confirmation from CuteLooksSudios",
+                text_content,
+                settings.EMAIL_HOST_USER,
+                [email]
+            )
+            email.attach_alternative(html_content, 'text/html')
+            email.send()
+            # kkkkkkkkkkkkk
+            content = {
+                "username": username,
+                "email": email,
+                "phone": phone,
+                "booking_type": booking_type,
+                "booking_specification": booking_specification,
+
+            }
+            html_content2 = render_to_string("receive.html", content)
+            text_content2 = strip_tags(html_content2)
+            email2 = EmailMultiAlternatives(
+                "Client Bookings From CuteLooks Website",
+                text_content2,
+                settings.EMAIL_HOST_USER,
+                ["cutelooksgh@gmail.com"]
+            )
+            email2.attach_alternative(html_content2, 'text/html')
+            email2.send()
+            # sms 
+            message_to_broadcast = ("Have you played the incredible TwilioQuest "
+                                    "yet? Grab it here: https://www.twilio.com/quest")
+            client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+            client.messages.create(to=phone,
+                                   from_=settings.TWILIO_NUMBER,
+                                   body=message_to_broadcast)
             return redirect('siteAppUrls:confirmPage')
         except:
-            pass
+            return HttpResponse("Email not successful")
+
     else:
         pass
     return render(request, 'booking.html', context)
@@ -183,3 +224,15 @@ def confirmPage(request):
         'contact': '',
     }
     return render(request, 'confirm.html', context)
+
+
+def emailPage(request):
+    context = {
+        "username": 'Ernest',
+        "email":'akotobamfo.eab@gmail.com',
+        "phone": '02134122312',
+        "booking_type": 'photoshoot',
+        "booking_specification": 'full gram',
+
+    }
+    return render(request, 'email.html',context)
