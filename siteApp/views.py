@@ -199,12 +199,12 @@ def bookingPage(request):
             email2.attach_alternative(html_content2, 'text/html')
             email2.send()
             # sms 
-            message_to_broadcast = ("Have you played the incredible TwilioQuest "
-                                    "yet? Grab it here: https://www.twilio.com/quest")
-            client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
-            client.messages.create(to=phone,
-                                   from_=settings.TWILIO_NUMBER,
-                                   body=message_to_broadcast)
+            # message_to_broadcast = ("Have you played the incredible TwilioQuest "
+            #                         "yet? Grab it here: https://www.twilio.com/quest")
+            # client = Client(settings.TWILIO_ACCOUNT_SID, settings.TWILIO_AUTH_TOKEN)
+            # client.messages.create(to=phone,
+            #                        from_=settings.TWILIO_NUMBER,
+            #                        body=message_to_broadcast)
             return redirect('siteAppUrls:confirmPage')
         except:
             return HttpResponse("Email not successful")
