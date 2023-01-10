@@ -75,7 +75,7 @@ def indexPage(request):
                 subject,
                 text_content2,
                 settings.EMAIL_HOST_USER,
-                ["cutelooksgh@gmail.com"]
+                ["akotobamfo.eab@gmail.com"]
             )
             email2.attach_alternative(html_content2, 'text/html')
             email2.send()
