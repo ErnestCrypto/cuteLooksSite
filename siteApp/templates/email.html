@@ -21,6 +21,7 @@
     CuteLooks Studios 
 </h2>
 </div>
+{% if booking_type %}
 <div style="padding:3%">
 <h4 style="text-transform:capitalize;color:#FA5BDD; font-weight: 600;font-size:21px;"> booking confirmation from CuteLooks Studios</h4>
   <p style="text-transform:capitalize; color: rgba(0,0,0,0.5);font-size:16px">
@@ -32,8 +33,27 @@ confirmed.
 You will be contacted shortly. Thank you.
 </p>
 </div>
-
-
+{% elif index %}
+<div style="padding:3%">
+<h4 style="text-transform:capitalize;color:#FA5BDD; font-weight: 600;font-size:21px;"> Enquires confirmation from CuteLooks Studios</h4>
+  <p style="text-transform:capitalize; color: rgba(0,0,0,0.5);font-size:16px">
+    Dear {{username}},
+  </p>
+<p style=" color: rgba(0,0,0,0.5);font-size:16px">
+Dear {{username}}, your email has been received successfully. Kindly contact us on our whatsapp number 0501865437. We will send you an email shortly.
+</p>
+</div>
+{% elif contact %}
+<div style="padding:3%">
+<h4 style="text-transform:capitalize;color:#FA5BDD; font-weight: 600;font-size:21px;"> Enquires confirmation from CuteLooks Studios</h4>
+  <p style="text-transform:capitalize; color: rgba(0,0,0,0.5);font-size:16px">
+    Dear {{username}},
+  </p>
+<p style=" color: rgba(0,0,0,0.5);font-size:16px">
+Dear {{username}}, your email has been received successfully. Kindly contact us on our whatsapp number 024 397 1445. We will send you an email shortly.
+</p>
+</div>
+{% endif %}
 
 </div>
 </html>

@@ -21,6 +21,8 @@
     CuteLooks Website 
 </h2>
 </div>
+
+{% if booking_type %}
 <div style="padding:3%">
 <h4 style="text-transform:capitalize;color:#FA5BDD; font-weight: 600;font-size:21px;"> booking confirmation from CuteLooks Website</h4>
   <p style="text-transform:capitalize; color: rgba(0,0,0,0.5);font-size:16px">
@@ -32,8 +34,27 @@ confirmed. Client can be contacted on {{phone}}. Thank you
 
 </p>
 </div>
+{% elif index %}
+<div style="padding:3%">
+<h4 style="text-transform:capitalize;color:#FA5BDD; font-weight: 600;font-size:21px;">Enquires Confirmation from CuteLooks Website </h4>
+  <p style="text-transform:capitalize; color: rgba(0,0,0,0.5);font-size:16px">
+    Dear IT Support Team,
+  </p>
+<p style=" color: rgba(0,0,0,0.5);font-size:16px">
+An enquiry has been made by {{username}} with mesasge "{{message}}". His email is {{email}} and phone number is {{phone}}
+</p>
+</div>
 
-
-
+{% elif contact %}
+<div style="padding:3%">
+<h4 style="text-transform:capitalize;color:#FA5BDD; font-weight: 600;font-size:21px;">Enquires Confirmation from CuteLooks Website </h4>
+  <p style="text-transform:capitalize; color: rgba(0,0,0,0.5);font-size:16px">
+    Dear CEO,
+  </p>
+<p style=" color: rgba(0,0,0,0.5);font-size:16px">
+An enquiry has been made by {{username}} with mesasge "{{message}}". His email is {{email}} and phone number is {{phone}}
+</p>
+</div>
+{% endif %}
 </div>
 </html>
