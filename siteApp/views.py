@@ -54,7 +54,7 @@ def indexPage(request):
             html_content = render_to_string("email.html", context)
             text_content = strip_tags(html_content)
             email = EmailMultiAlternatives(
-                subject,
+                "Client Experience From CuteLooks Website",
                 text_content,
                 settings.EMAIL_HOST_USER,
                 [email_client]
@@ -72,7 +72,7 @@ def indexPage(request):
             html_content2 = render_to_string("receive.html", content)
             text_content2 = strip_tags(html_content2)
             email2 = EmailMultiAlternatives(
-                "Client Experience From CuteLooks Website",
+                subject,
                 text_content2,
                 settings.EMAIL_HOST_USER,
                 ["cutelooksgh@gmail.com"]
@@ -153,7 +153,7 @@ def contactPage(request):
             html_content = render_to_string("email.html", context)
             text_content = strip_tags(html_content)
             email = EmailMultiAlternatives(
-                subject,
+                "Client Enquiries From CuteLooks Website",
                 text_content,
                 settings.EMAIL_HOST_USER,
                 [email_client]
@@ -171,7 +171,7 @@ def contactPage(request):
             html_content2 = render_to_string("receive.html", content)
             text_content2 = strip_tags(html_content2)
             email2 = EmailMultiAlternatives(
-                "Client Enquiries From CuteLooks Website",
+                subject,
                 text_content2,
                 settings.EMAIL_HOST_USER,
                 ["cutelooksgh@gmail.com"]
