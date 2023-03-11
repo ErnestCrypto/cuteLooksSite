@@ -434,9 +434,21 @@ margin: 0 auto;
 
 /* email.html */
 
-
-
-
+/* work.html */
+.rules{
+    padding: 2%;
+    /* border-radius: 5px; */
+    background: #F95BDC;
+}
+.rules p{
+    color:white !important;
+    font-weight: bold;
+}
+.rules li{
+color:white !important;
+font-weight: 600;
+}
+/* work.html */
 
 
 @media only screen and (max-width: 600px) {
